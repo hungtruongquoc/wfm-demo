@@ -54,4 +54,7 @@ fabric.properties
 # No need to track these files. They can be installed
 node_modules
 
+# No need to track the distribution folder
+dist
+
 

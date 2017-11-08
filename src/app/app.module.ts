@@ -5,19 +5,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import {BaseComponent} from './components/base.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+
+import {ShareComponentModule} from './components/share-component.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BaseComponent,
-    NotFoundComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ShareComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

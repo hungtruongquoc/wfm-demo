@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { TestRoutingModule } from './test-routing.module';
 import { IndexComponent } from './index/index.component';
+import {ShareComponentModule} from '../components/share-component.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    TestRoutingModule
+    TestRoutingModule,
+    ShareComponentModule
   ],
   declarations: [IndexComponent]
 })

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IndexComponent } from './index.component';
+import {ShareComponentModule} from '../../components/share-component.module';
 
 describe('Test - IndexComponent', () => {
   let component: IndexComponent;
@@ -8,7 +9,8 @@ describe('Test - IndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndexComponent ]
+      declarations: [ IndexComponent ],
+      imports: [ShareComponentModule]
     })
     .compileComponents();
   }));
@@ -28,8 +30,8 @@ describe('Test - IndexComponent', () => {
     expect(component.isLoading).toBeTruthy();
   });
 
-  it('should have a property "title" and to be "No Name" by default', () => {
+  it('should have a property "title" and to be "Test" by default', () => {
     expect(component.title).toBeDefined();
-    expect(component.title).toBe('No Name');
+    expect(component.title).toBe('Test');
   });
 });

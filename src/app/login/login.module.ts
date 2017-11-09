@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { IndexComponent } from './index/index.component';
@@ -9,7 +10,8 @@ import {ShareComponentModule} from '../components/share-component.module';
   imports: [
     CommonModule,
     LoginRoutingModule,
-    ShareComponentModule
+    ShareComponentModule,
+    NgbModule
   ],
   declarations: [IndexComponent]
 })

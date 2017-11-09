@@ -3,6 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IndexComponent } from './index.component';
 import {ShareComponentModule} from '../../components/share-component.module';
 
+
+
 describe('Login - IndexComponent', () => {
   let component: IndexComponent;
   let fixture: ComponentFixture<IndexComponent>;
@@ -33,5 +35,10 @@ describe('Login - IndexComponent', () => {
   it('should have a property "title" and to be "Login" by default', () => {
     expect(component.title).toBeDefined();
     expect(component.title).toBe('Login');
+  });
+
+  it('should have a "loadingMessage" property and have value "Loading" by default', () => {
+    expect(component.loadingMessage).toBeDefined();
+    expect(component.loadingMessage).toBe('Loading');
   });
 });

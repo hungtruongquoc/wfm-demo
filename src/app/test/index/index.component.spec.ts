@@ -34,4 +34,9 @@ describe('Test - IndexComponent', () => {
     expect(component.title).toBeDefined();
     expect(component.title).toBe('Test');
   });
+
+  it('should have a "loadingMessage" property and have value "Loading" by default', () => {
+    expect(component.loadingMessage).toBeDefined();
+    expect(component.loadingMessage).toBe('Loading');
+  });
 });

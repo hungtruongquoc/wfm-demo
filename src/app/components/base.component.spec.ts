@@ -32,4 +32,21 @@ describe('BaseComponent', () => {
     expect(component.title).toBeDefined();
     expect(component.title).toBe('No Name');
   });
+
+  it('can update "title" value', () => {
+    expect(component.title).toBe('No Name');
+    component.title = 'New Name';
+    expect(component.title).toBe('New Name');
+  });
+
+  it('should have a "loadingMessage" property and have value "Loading" by default', () => {
+    expect(component.loadingMessage).toBeDefined();
+    expect(component.loadingMessage).toBe('Loading');
+  });
+
+  it('can update "loadingMessage" value', () => {
+    expect(component.loadingMessage).toBe('Loading');
+    component.title = 'Waiting';
+    expect(component.title).toBe('Waiting');
+  });
 });

@@ -1,6 +1,9 @@
-<h3 class="display-3">
+<h2>
   {{title}} module
-</h3>
+</h2>
+<div class="text-info">
+  Visited: {{visitCounts | async}}
+</div>
 <h4 *ngIf="isLoading" class="text-center" >
   <wfm-loading></wfm-loading>
 </h4>

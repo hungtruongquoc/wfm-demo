@@ -8,10 +8,9 @@ import {BaseComponent} from '../../components/base.component';
 })
 export class IndexComponent extends BaseComponent implements OnInit {
 
-  protected  _title = 'Login';
-
   constructor() {
     super();
+    this.title = 'Login';
   }
 
   ngOnInit() {

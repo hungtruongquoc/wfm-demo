@@ -14,7 +14,6 @@ export class IndexComponent extends BaseSmartComponent implements OnInit {
   constructor(store: NgRedux<IAppState>) {
     super(store);
     this.title = 'Login';
-    store.dispatch({type: VISITED, payload: 'login'});
   }
 
   ngOnInit() {

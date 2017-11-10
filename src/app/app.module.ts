@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {ShareComponentModule} from './components/share-component.module';
+import {StoreModule} from './store/store.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ShareComponentModule} from './components/share-component.module';
     AppRoutingModule,
     NgbModule.forRoot(),
     ShareComponentModule,
-    NgReduxModule
+    NgReduxModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

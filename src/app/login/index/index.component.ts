@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import {BaseComponent} from '../../components/base.component';
+import {IAppState} from '../../store/models';
+import {NgRedux} from '@angular-redux/store';
+import {VISITED} from '../../shared/actions';
+import {BaseSmartComponent} from '../../components/base-smart.component';
 
 @Component({
   selector: 'login-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexComponent extends BaseComponent implements OnInit {
+export class IndexComponent extends BaseSmartComponent implements OnInit {
 
-  constructor() {
-    super();
+  constructor(store: NgRedux<IAppState>) {
+    super(store);
     this.title = 'Login';
+    store.dispatch({type: VISITED, payload: 'login'});
   }
 
   ngOnInit() {
   }
-
 }

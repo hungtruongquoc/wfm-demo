@@ -15,4 +15,4 @@ import {ShareComponentModule} from '../components/share-component.module';
   ],
   declarations: [IndexComponent]
 })
-export class LoginModule { }
+export class LoginModule {}

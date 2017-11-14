@@ -56,5 +56,4 @@ node_modules
 
 # No need to track the distribution folder
 dist
-
-
+coverage

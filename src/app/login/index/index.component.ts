@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {IAppState} from '../../store/models';
 import {NgRedux} from '@angular-redux/store';
-import {VISITED} from '../../shared/actions';
 import {BaseSmartComponent} from '../../components/base-smart.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'login-index',
@@ -11,8 +11,8 @@ import {BaseSmartComponent} from '../../components/base-smart.component';
 })
 export class IndexComponent extends BaseSmartComponent implements OnInit {
 
-  constructor(store: NgRedux<IAppState>) {
-    super(store);
+  constructor(store: NgRedux<IAppState>, router: Router) {
+    super(store, router);
     this.title = 'Login';
   }
 

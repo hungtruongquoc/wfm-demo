@@ -46,7 +46,7 @@ describe('BaseComponent', () => {
 
   it('can update "loadingMessage" value', () => {
     expect(component.loadingMessage).toBe('Loading');
-    component.title = 'Waiting';
-    expect(component.title).toBe('Waiting');
+    component.loadingMessage = 'Waiting';
+    expect(component.loadingMessage).toBe('Waiting');
   });
 });

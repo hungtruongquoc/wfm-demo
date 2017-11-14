@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgReduxTestingModule } from '@angular-redux/store/testing';
 
 import { IndexComponent } from './index.component';
 import {ShareComponentModule} from '../../components/share-component.module';
@@ -10,7 +12,7 @@ describe('Test - IndexComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ IndexComponent ],
-      imports: [ShareComponentModule]
+      imports: [ShareComponentModule, RouterTestingModule, NgReduxTestingModule]
     })
     .compileComponents();
   }));

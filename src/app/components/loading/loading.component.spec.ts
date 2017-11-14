@@ -27,4 +27,10 @@ describe('LoadingComponent', () => {
     expect(component.message).toBeDefined();
     expect(component.message).toBe('Loading');
   });
+
+  it('should be able to update the "message" property with new value', () => {
+    expect(component.message).toBeDefined();
+    component.message = 'Test loading';
+    expect(component.message).toBe('Test loading');
+  });
 });

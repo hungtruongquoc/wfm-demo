@@ -6,6 +6,7 @@ export interface IAppState {
   pages: IPageInfo;
   routes?: any;
   feedback?: any;
+  isAuthenticated: boolean;
 
   visitCounts(): number;
 
@@ -18,6 +19,7 @@ export interface IAppState {
 
 export class AppState implements IAppState {
   pages = {};
+  isAuthenticated = false;
 
   copyPageCollection(oldCollection: IPageInfo) {
     this.pages = JSON.parse(JSON.stringify(oldCollection));
@@ -47,6 +49,14 @@ export class AppState implements IAppState {
 
   addANewPage(pageName: string) {
     this.pages[pageName] = 0;
+  }
+
+  isUserAuthenticated(): boolean {
+    return this.isAuthenticated;
+  }
+
+  setUserAuthenitcated(value: boolean = false) {
+    this.isAuthenticated = value;
   }
 }
 

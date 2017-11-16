@@ -30,6 +30,30 @@ describe('AppState Object', () => {
     expect(appState.addANewPage).toBeDefined();
   }));
 
+  it('should have a "isUserAuthenticated" method', async(() => {
+    expect(appState.isUserAuthenticated).toBeDefined();
+  }));
+
+  it('should have a "setUserAuthenitcated" method', async(() => {
+    expect(appState.setUserAuthenitcated).toBeDefined();
+  }));
+
+  it('should have a "isUserAuthenticated" method which returns FALSE by default', async(() => {
+    expect(appState.isUserAuthenticated()).toBeFalsy();
+  }));
+
+  it('should have a "setUserAuthenitcated" method which alters the authentication status to FALSE when no value provided', async(() => {
+    appState.setUserAuthenitcated(true);
+    appState.setUserAuthenitcated();
+    expect(appState.isUserAuthenticated()).toBeFalsy();
+  }));
+
+  it('should have a "setUserAuthenitcated" method which can alter the value of authentication status', async(() => {
+    expect(appState.isUserAuthenticated()).toBeFalsy();
+    appState.setUserAuthenitcated(true);
+    expect(appState.isUserAuthenticated()).toBeTruthy();
+  }));
+
   it('should have a "addANewPage" method to a new page to the list', async(() => {
     appState.addANewPage('test');
     expect(appState.getNumberOfPages()).toBe(1);

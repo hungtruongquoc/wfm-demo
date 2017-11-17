@@ -35,22 +35,44 @@ describe('AppState Object', () => {
   }));
 
   it('should have a "setUserAuthenitcated" method', async(() => {
-    expect(appState.setUserAuthenitcated).toBeDefined();
+    expect(appState.setUserAuthenticated).toBeDefined();
   }));
 
   it('should have a "isUserAuthenticated" method which returns FALSE by default', async(() => {
     expect(appState.isUserAuthenticated()).toBeFalsy();
   }));
 
-  it('should have a "setUserAuthenitcated" method which alters the authentication status to FALSE when no value provided', async(() => {
-    appState.setUserAuthenitcated(true);
-    appState.setUserAuthenitcated();
+  it('should have a "routeGuardEnabled" property', async(() => {
+    expect(appState.routeGuardEnabled).toBeDefined();
+  }));
+
+  it('should have a "routeGuardEnabled" property which returns FALSE by default', async(() => {
+    expect(appState.routeGuardEnabled).toBeFalsy();
+  }));
+
+  it('should have a "setGuardEnabled" method', async(() => {
+    expect(appState.setGuardEnabled).toBeDefined();
+  }));
+
+  it('should have a "setGuardEnabled" method which sets the status to FALSE by default', async(() => {
+    appState.setGuardEnabled();
+    expect(appState.routeGuardEnabled).toBeFalsy();
+  }));
+
+  it('should have a "setGuardEnabled" method which updates the status', async(() => {
+    appState.setGuardEnabled(true);
+    expect(appState.routeGuardEnabled).toBeTruthy();
+  }));
+
+  it('should have a "setUserAuthenticated" method which alters the authentication status to FALSE when no value provided', async(() => {
+    appState.setUserAuthenticated(true);
+    appState.setUserAuthenticated();
     expect(appState.isUserAuthenticated()).toBeFalsy();
   }));
 
-  it('should have a "setUserAuthenitcated" method which can alter the value of authentication status', async(() => {
+  it('should have a "setUserAuthenticated" method which can alter the value of authentication status', async(() => {
     expect(appState.isUserAuthenticated()).toBeFalsy();
-    appState.setUserAuthenitcated(true);
+    appState.setUserAuthenticated(true);
     expect(appState.isUserAuthenticated()).toBeTruthy();
   }));
 

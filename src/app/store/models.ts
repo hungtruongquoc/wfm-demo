@@ -7,6 +7,7 @@ export interface IAppState {
   routes?: any;
   feedback?: any;
   isAuthenticated: boolean;
+  routeGuardEnabled: boolean;
 
   visitCounts(): number;
 
@@ -20,6 +21,15 @@ export interface IAppState {
 export class AppState implements IAppState {
   pages = {};
   isAuthenticated = false;
+  _routeGuardEnabled = false;
+
+  get routeGuardEnabled() {
+    return this._routeGuardEnabled;
+  }
+
+  setGuardEnabled(status: boolean = false) {
+    this._routeGuardEnabled = status;
+  }
 
   copyPageCollection(oldCollection: IPageInfo) {
     this.pages = JSON.parse(JSON.stringify(oldCollection));
@@ -55,7 +65,7 @@ export class AppState implements IAppState {
     return this.isAuthenticated;
   }
 
-  setUserAuthenitcated(value: boolean = false) {
+  setUserAuthenticated(value: boolean = false) {
     this.isAuthenticated = value;
   }
 }

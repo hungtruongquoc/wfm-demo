@@ -50,6 +50,14 @@ describe('AppState Object', () => {
     expect(appState.routeGuardEnabled).toBeFalsy();
   }));
 
+  it('should have a "isLoading" property', async(() => {
+    expect(appState.isLoading).toBeDefined();
+  }));
+
+  it('should have a "isLoading" property which to be TRUE by default', async(() => {
+      expect(appState.isLoading).toBeTruthy();
+  }));
+
   it('should have a "setGuardEnabled" method', async(() => {
     expect(appState.setGuardEnabled).toBeDefined();
   }));

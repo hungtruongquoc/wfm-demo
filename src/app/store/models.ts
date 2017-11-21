@@ -8,7 +8,7 @@ export interface IAppState {
   feedback?: any;
   isAuthenticated: boolean;
   routeGuardEnabled: boolean;
-
+  isLoading: boolean;
   visitCounts(): number;
 
   getPageVisitCount(pageName: string): number;
@@ -22,9 +22,18 @@ export class AppState implements IAppState {
   pages = {};
   isAuthenticated = false;
   _routeGuardEnabled = false;
+  _isLoading = true;
 
   get routeGuardEnabled() {
     return this._routeGuardEnabled;
+  }
+
+  get isLoading() {
+    return this._isLoading;
+  }
+
+  set isLoading(value: boolean) {
+    this._isLoading = value;
   }
 
   setGuardEnabled(status: boolean = false) {

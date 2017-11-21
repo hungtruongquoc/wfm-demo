@@ -12,18 +12,11 @@ import {GLOBAL_LOADING_COMPLETED} from './shared/actions';
 })
 export class AppComponent {
 
-  @select(state => state.visitCounts()) protected readonly visitedCount: Observable<number>;
-  @select() protected readonly isLoading$: Observable<boolean>;
+  @select(state => state.visitCounts()) readonly visitedCount: Observable<number>;
+  @select() readonly isLoading$: Observable<boolean>;
   title = 'Embedded App';
-
-  protected navItemClick(event) {
-    const button: HTMLAnchorElement = event.target;
-    if (button.className.indexOf('disabled') > -1) {
-      event.stopPropagation();
-      event.preventDefault();
-      return false;
-    }
-  }
+  // Property for showing/hiding the global progress bar
+  protected _progressBarDisplayed = true;
 
   constructor(private store: NgRedux<AppState>) {
 
@@ -31,9 +24,6 @@ export class AppComponent {
 
     setTimeout(() => { this.markGlobalLoadingCompleted(); }, 10000);
   }
-
-  // Property for showing/hiding the global progress bar
-  protected _progressBarDisplayed = true;
 
   set progressBarDisplayed(show: boolean) {
     this._progressBarDisplayed = show;

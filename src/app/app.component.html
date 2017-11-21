@@ -11,12 +11,12 @@
 </div>
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/test" routerLinkActive="active" (click)="navItemClick($event)">
+    <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/test" routerLinkActive="active">
       Test {{getPageVisit('Test') | async}}
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/login" routerLinkActive="active" (click)="navItemClick($event)">
+    <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/login" routerLinkActive="active">
       <i class="far fa fa-key"></i> Login {{getPageVisit('Login') | async}}
     </a>
   </li>

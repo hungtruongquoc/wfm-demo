@@ -1,6 +1,6 @@
 // import {Action, combineReducers} from 'redux';
 import {IAppState, INITIAL_STATE} from './models';
-import {VISITED} from '../shared/actions';
+import {GLOBAL_LOADING_COMPLETED, VISITED} from '../shared/actions';
 import {AppActions} from './app.action';
 import {isNullOrUndefined} from 'util';
 
@@ -14,6 +14,7 @@ export function rootReducer(state: IAppState = INITIAL_STATE, action: any) {
     const appAction = new AppActions(state, action);
     switch (action.type) {
       case VISITED: return appAction.markVisit();
+      case GLOBAL_LOADING_COMPLETED: return appAction.markLoadingGlobalCompleted();
     }
   }
   return state;

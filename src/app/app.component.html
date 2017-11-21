@@ -2,17 +2,23 @@
 <div>
   <ngb-progressbar *ngIf="progressBarDisplayed" type="info" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
 </div>
+<div></div>
 <div>
   <h1 class="display-1">
     {{title}}
+    <span class="badge badge-info">{{visitedCount | async}}</span>
   </h1>
 </div>
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link" routerLink="/test" routerLinkActive="active">Test</a>
+    <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/test" routerLinkActive="active" (click)="navItemClick($event)">
+      Test {{getPageVisit('Test') | async}}
+    </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/login" routerLinkActive="active"><i class="far fa fa-key"></i> Login</a>
+    <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/login" routerLinkActive="active" (click)="navItemClick($event)">
+      <i class="far fa fa-key"></i> Login {{getPageVisit('Login') | async}}
+    </a>
   </li>
 </ul>
 <!--<h2>Here are some links to help you start: </h2>-->

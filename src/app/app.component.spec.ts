@@ -3,13 +3,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
 import {NgbModule, NgbProgressbarConfig} from '@ng-bootstrap/ng-bootstrap';
+import {NgReduxTestingModule} from "@angular-redux/store/lib/testing";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        NgbModule
+        NgbModule,
+        NgReduxTestingModule
       ],
       declarations: [
         AppComponent

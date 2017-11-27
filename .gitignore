@@ -57,3 +57,6 @@ node_modules
 # No need to track the distribution folder
 dist
 coverage
+
+# No need to track the environment file
+.env

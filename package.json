@@ -10,7 +10,8 @@
     "build:prod:poc": "ng build --prod --base-href /static/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:api:local": "node ./node_modules/json-server/bin/index.js --watch ./data/mu.json"
   },
   "private": true,
   "dependencies": {

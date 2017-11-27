@@ -11,17 +11,13 @@ import {GLOBAL_LOADING_COMPLETED} from './shared/actions';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  @select(state => state.visitCounts()) readonly visitedCount: Observable<number>;
   @select() readonly isLoading$: Observable<boolean>;
   title = 'Embedded App';
   // Property for showing/hiding the global progress bar
   protected _progressBarDisplayed = true;
 
   constructor(private store: NgRedux<AppState>) {
-
     this.isLoading$.subscribe((value: boolean) => { this._progressBarDisplayed = value; });
-
     setTimeout(() => { this.markGlobalLoadingCompleted(); }, 10000);
   }
 
@@ -33,10 +29,13 @@ export class AppComponent {
     return this._progressBarDisplayed;
   }
 
-  protected getPageVisit(pageName: string): Observable<string> {
+  getPageVisit(pageName: string): Observable<string> {
     return this.store.select(state => state.pages[pageName]);
   }
 
-  @dispatch() protected markGlobalLoadingCompleted = () => ({type: GLOBAL_LOADING_COMPLETED});
+  get visitCount(): Observable<number> {
+    return this.store.select(state => state.visitCounts());
+  }
 
+  @dispatch() protected markGlobalLoadingCompleted = () => ({type: GLOBAL_LOADING_COMPLETED});
 }

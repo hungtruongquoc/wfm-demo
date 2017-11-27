@@ -34,8 +34,7 @@ export class BaseSmartComponent extends BaseComponent implements OnInit, OnDestr
   ngOnInit() {}
 
   ngOnDestroy() {
-    // This unsubscription makes sure that we don't leave memory leak when a component is destroyed
-    // but the event is stilled intact
+    // This removes the subscription when a component is destroyed.
     this.navigationEndSub.unsubscribe();
   }
 }

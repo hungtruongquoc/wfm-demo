@@ -1,0 +1,886 @@
+{
+  "mus": [
+    {
+      "id": 1,
+      "oid": "2c99028e2d7a1d0e012d7c467c1b30d6",
+      "name": "PN Oracle MU Sales - New York",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2,
+      "oid": "2c99028e2d7a1d0e012d7c483dcb3164",
+      "name": "PN Oracle MU Sales - Boston",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 3,
+      "oid": "2c99028e2d86d3ee012d8abfc7c5005c",
+      "name": "PN Oracle TZ Team",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5,
+      "oid": "2c99028e2e7d5694012e8da2b78a0010",
+      "name": "PN Test New MU",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 500,
+      "oid": "2c99ee6952f0c1260152fa146447124b",
+      "name": "MU_500",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 1000,
+      "oid": "2c99028e2de2fcdb012de8267c8e003e",
+      "name": "jc1000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2000,
+      "oid": "2c99028e2d7a1d0e012d7bd3913d2ff6",
+      "name": "Support East",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2001,
+      "oid": "2c99028e2d7a1d0e012d7be439e6301e",
+      "name": "Support Central",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2002,
+      "oid": "2c99028e2d7a1d0e012d7bf1f0e23040",
+      "name": "Suport West ",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2007,
+      "oid": "2c99ef4b3641dd7501364d437b640597",
+      "name": "Support London",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2008,
+      "oid": "2c99ef4b3641dd7501364d476ea7059b",
+      "name": "Support Rome",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2009,
+      "oid": "2c99ef4b3641dd7501364d4c53a205a1",
+      "name": "Support Sydney",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 2030,
+      "oid": "2c99ef4b35e9c8900135ecf4779f2f28",
+      "name": "MU2030",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 4000,
+      "oid": "2c99efe13af4d226013af9394c730015",
+      "name": "MU4000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 4001,
+      "oid": "2c99efe13af4d226013af95b6d6415c8",
+      "name": "MU4001",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 4003,
+      "oid": "2c99efe13af4d226013afa62ad5526ea",
+      "name": "MU4003",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5000,
+      "oid": "2c99028e2d7a1d0e012d800de6fb497b",
+      "name": "MU 5000 New Quahog",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5001,
+      "oid": "2c99ef4b320123040132173fc44200b6",
+      "name": "Copy of MU 5000 (WFM-667)",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5100,
+      "oid": "2c99ef935985761b0159faa1fcf50011",
+      "name": "5100 TL Test MU",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5101,
+      "oid": "2c99ef935c36f059015c598ae08b0011",
+      "name": "5101 TrueLogic Date Range",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5150,
+      "oid": "2c99028e2d7a1d0e012d7b01d8cf2cca",
+      "name": "LT MU 5150 for OCM Testing",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 5151,
+      "oid": "2c99028e2d7a1d0e012d7c83bfee357b",
+      "name": "LT MU 5151 for Inbound CT 5151",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6000,
+      "oid": "2c99028d2955526501296566312843e7",
+      "name": "6000 Sat Team Sched, Block Scheduling and Patterns",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6001,
+      "oid": "2c99028d2955526501296566da2343ea",
+      "name": "6001 Holiday Fairness, Future Activities and Vacations",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6002,
+      "oid": "2c99028d2955526501296567836343ed",
+      "name": "6002 Mon Sat Sun Fairness SeatLimits",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6003,
+      "oid": "2c99028d29b256d50129b2d92e510006",
+      "name": "6003 Weekend B Fairness",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6004,
+      "oid": "2c99028e2de2fcdb012dec648dd541ce",
+      "name": "6004 Sat US/Eastern",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6005,
+      "oid": "2c99ef4b30c37a580130d7cd28a4781f",
+      "name": "6005 StartTimePrefs",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6006,
+      "oid": "2c99ef4b30c37a580130d7ce9d367823",
+      "name": "6006 DayOffPatternsPref",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6007,
+      "oid": "2c99ef4b30c37a580130d7d05e757827",
+      "name": "6007 DaysPerWeekPref for this longer name that should be display",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6008,
+      "oid": "2c99ef4b30c37a580130d7d1d839782b",
+      "name": "6008 HoursPerWeekPrefs",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6009,
+      "oid": "2c99ef4b30c37a580130d7d32aa5782f",
+      "name": "6009 StartTimeConsistencyPrefs",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6010,
+      "oid": "2c99ef4b30c37a580130d7d3b9417833",
+      "name": "6010 StopTimePrefs",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6011,
+      "oid": "2c99ef4b30c37a580130d7d498837837",
+      "name": "6011 LunchLengthPrefs",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6012,
+      "oid": "2c99ef4b30c37a580130d7d53f72783b",
+      "name": "6012 CustomPrefs",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6050,
+      "oid": "2c99028e2dc32c6d012ddd67d88e3da3",
+      "name": "6050 Thu Asia/Baku ST 10/20 5a  DST 3/27 4a",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6051,
+      "oid": "2c99028e2dc32c6d012ddd692f653da7",
+      "name": "6051 Sun Goosebay ST 11/6 12:01a  DST 3/13 12:01a",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6052,
+      "oid": "2c99028e2dc32c6d012ddd6c82313dab",
+      "name": "6052 Wed NZ-Chat  ST 4/3 3:45a   DST 9/25 2:45a",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6053,
+      "oid": "2c99028e2dc32c6d012ddd6daa823daf",
+      "name": "6053 Mon Buenos/Aires ST 3/19 12a  DST 10/15 12a",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6055,
+      "oid": "2c99028e2e025b8f012e0661cba949ee",
+      "name": "6055 Mon GB DST 3/27 1am  ST10/30 2a WRPref AltSr",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6056,
+      "oid": "2c99028e2e025b8f012e0b4de20e7e0a",
+      "name": "6056 GB Mon DST 3/27 1am  ST 10/30 2a  WRL2H DRPref",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6058,
+      "oid": "2c99028e2e025b8f012e10347d9d1e7a",
+      "name": "6058 GB DRPref Sen high to low",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6100,
+      "oid": "2c99028e2e025b8f012e2fb2c1512e4b",
+      "name": "6100 GMT Sun DR start times",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6101,
+      "oid": "2c99028e2e025b8f012e2fe0a7564a3b",
+      "name": "6101 GMT Sun DR day off patterns",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6102,
+      "oid": "2c99ef512f78366801300403e2ec0226",
+      "name": "6102 GMT Sun WR daily rule",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6103,
+      "oid": "2c99ef512f7836680130040b775a022d",
+      "name": "6103 GMT Sun WR stop times",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 6104,
+      "oid": "2c99ef4b32df32c20132eed816110616",
+      "name": "6104 GMT Sun WRPref WFM-1467",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 7000,
+      "oid": "2c9906032cf034f7012cf4bed6086257",
+      "name": "7000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 9000,
+      "oid": "2c99028e2d7a1d0e012d7aa52d2d2814",
+      "name": "9000 MU",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 10000,
+      "oid": "2c99efe13af4d226013af9b01ab317d0",
+      "name": "MU 10000 Monday, EET",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12000,
+      "oid": "2c99efe13e864431013e9f3384ef0c97",
+      "name": "SILK MU 12000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12001,
+      "oid": "2c99efe13af4d226013b62a26e8a29d6",
+      "name": "SILK MU 12001",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12002,
+      "oid": "2c99efe13af4d226013b66df81252e86",
+      "name": "SILK MU 12002",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12003,
+      "oid": "2c99efe13af4d226013b66f1c86b31dd",
+      "name": "SILK MU 12003",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12004,
+      "oid": "2c99efe13e7f901d013e846ae43d02b9",
+      "name": "SILK MU 12004",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12005,
+      "oid": "2c99efe13e7f901d013e8476f87a047e",
+      "name": "SILK MU 12005",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12006,
+      "oid": "2c99efe13e864431013e8ab13ead0329",
+      "name": "SILK MU 12006",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12007,
+      "oid": "2c99efe13e864431013e8eabf957047f",
+      "name": "SILK MU 12007",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12008,
+      "oid": "2c99efe13e864431013e8ec5f9100b74",
+      "name": "SILK MU 12008",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12009,
+      "oid": "2c99efe13e864431013e9f4011c30ca9",
+      "name": "SILK MU 12009",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12010,
+      "oid": "2c99efe13e864431013e9fad4c4e0cfe",
+      "name": "SILK MU 12010",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12011,
+      "oid": "2c99efe13e864431013ea3035a2b0d05",
+      "name": "SILK MU 12011",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12012,
+      "oid": "2c99efe13f859d77013f8b2ac1b10a2b",
+      "name": "SILK MU 12012",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12013,
+      "oid": "2c99efe13e864431013ea873221a0de0",
+      "name": "SILK MU 12013",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12014,
+      "oid": "2c99efe13e864431013ea87892c40df3",
+      "name": "SILK MU 12014",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12015,
+      "oid": "2c99efe13e864431013ea8e362510e15",
+      "name": "SILK MU 12015",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12016,
+      "oid": "2c99efe13e864431013eae351eef0e2c",
+      "name": "SILK MU 12016",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12017,
+      "oid": "2c99efe13e864431013eae44a8760e31",
+      "name": "SILK MU 12017",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12018,
+      "oid": "2c99efe13e864431013eae5061350e35",
+      "name": "SILK MU 12018",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12019,
+      "oid": "2c99efe13f859d77013f8b3631740bf7",
+      "name": "SILK MU 12019",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12020,
+      "oid": "2c99efe13fcf39a3013fd322a0bb0356",
+      "name": "SILK MU 12020",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12021,
+      "oid": "2c99efe13fcf39a3013fd425518c04c3",
+      "name": "SILK MU 12021",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12022,
+      "oid": "2c99efe13fcf39a3013fdde23e4f06cc",
+      "name": "SILK MU 12022",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12023,
+      "oid": "2c99efe13fcf39a3013fddf9da6406d3",
+      "name": "SILK MU 12023",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12024,
+      "oid": "2c99efe13fe3ea03013fe7b2c9310326",
+      "name": "SILK MU 12024",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12025,
+      "oid": "2c99efe13fe3ea03013fe7ecb57904f7",
+      "name": "SILK MU 12025",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12026,
+      "oid": "2c99efe13fe3ea03013fe981ed2d0e16",
+      "name": "SILK MU 12026",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12027,
+      "oid": "2c99efe141323a3501413b9b45de06f0",
+      "name": "SILK MU 12027",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12028,
+      "oid": "2c99efe1414b981701414c6c4f9200dd",
+      "name": "SILK MU 12028",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 12100,
+      "oid": "2c9906032b9be1c6012b9cb921130774",
+      "name": "SmartSync",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 13000,
+      "oid": "2c9906032ab49db1012aca16e7d80907",
+      "name": "Mercedes Salesforce",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 13500,
+      "oid": "2c9906032b43daad012b456efc992aa0",
+      "name": "Mercedes Services",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 13550,
+      "oid": "2c9906032b43daad012b456ff8842aa5",
+      "name": "Mercedes Sales",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 14000,
+      "oid": "2c9906032b595c1c012b5e7be34e6110",
+      "name": "test1",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 15000,
+      "oid": "2c99efe13f43072f013f579e720c001d",
+      "name": "MU 15000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 16500,
+      "oid": "2c99efe13f316f88013f34f312450017",
+      "name": "Luis MU 16500",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 16800,
+      "oid": "2c99efe13ff8757f014011e29c540800",
+      "name": "Luis MU 16800",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 17000,
+      "oid": "2c99efe13f9fb36b013fca33e21700c9",
+      "name": "Lima MU",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 18000,
+      "oid": "2c99efe13f9fb36b013f9fcfd7b20002",
+      "name": "MN MU 18000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 18001,
+      "oid": "2c99efe13f9fb36b013fa0b5549a00a7",
+      "name": "MN MU 18001",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 18002,
+      "oid": "2c99efe13f9fb36b013fa0b5f25b00ae",
+      "name": "MN MU 18002",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 18003,
+      "oid": "2c99efe13ff8757f013ff8b78fc80045",
+      "name": "MU 18003",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 20000,
+      "oid": "2c99efe140ea77b3014113dd2d8201d0",
+      "name": "RobinMU",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 21000,
+      "oid": "2c99ee6951a740260151ac6406e20021",
+      "name": "MU MGB 21000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 23000,
+      "oid": "2c99efe13ff20198013ff301460f01ce",
+      "name": "Lima MU 2",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 24000,
+      "oid": "2c99ee6951a740260151b0f6dfc304de",
+      "name": "Kenia MU",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 24001,
+      "oid": "2c99ee69531f691601532313edd80012",
+      "name": "Kenia MU2",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 30000,
+      "oid": "2c99ef4b32012304013287554f4a02bd",
+      "name": "diana li MU30000",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 30001,
+      "oid": "2c99ee6951a740260151ab9f952a000f",
+      "name": "Pris MU 30001",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60000,
+      "oid": "2c99028e2e48a9ae012e4e75363a0430",
+      "name": "60000 Daily Rule Seniority",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60001,
+      "oid": "2c99028e2e48a9ae012e4e760167043a",
+      "name": "60001 Daily Rule Rank",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60002,
+      "oid": "2c99028e2e48a9ae012e4e7666d10444",
+      "name": "60002 Daily Rule Alternate Seniority",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60003,
+      "oid": "2c99028e2e48a9ae012e4e77a245062e",
+      "name": "60003 Daily Rule high to low seniority",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60004,
+      "oid": "2c99028e2e48a9ae012e4e7a56980bf0",
+      "name": "60004 Daily Rule high to low rank",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60005,
+      "oid": "2c99028e2e48a9ae012e4e7af1291000",
+      "name": "60005 Daily rule high to low alternate seniority",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60006,
+      "oid": "2c99028e2e48a9ae012e4e7c8402181b",
+      "name": "60006 rel pref lunch DR6222 abs break timing method",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60007,
+      "oid": "2c99028e2e48a9ae012e4e7cddf21821",
+      "name": "60007 rel pref lunch DR6223 rel break timing method",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60008,
+      "oid": "2c99028e2e48a9ae012e4e7d36271c31",
+      "name": "60008 abs ref lunch DR6222 abs break timing method",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60009,
+      "oid": "2c99028e2e48a9ae012e4e7d89271c38",
+      "name": "60009 abs pref lunch DR6223 rel break timing method",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60010,
+      "oid": "2c99028e2e48a9ae012e4e7de0511c3f",
+      "name": "60010 pref lunch rel DR6224 split shift with lunch",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60011,
+      "oid": "2c99028e2e48a9ae012e4e7e69901c45",
+      "name": "60011 pref lunch abs DR6224 split shift with lunch",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60012,
+      "oid": "2c99028e2e48a9ae012e4e7ec6811c4b",
+      "name": "60012",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60013,
+      "oid": "2c99028e2e48a9ae012e4e7f22e31c51",
+      "name": "60013",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60014,
+      "oid": "2c99028e2e48a9ae012e4e8012c2246c",
+      "name": "60014",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60015,
+      "oid": "2c99028e2e48a9ae012e4e8370f548d1",
+      "name": "60015",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60016,
+      "oid": "2c99028e2e48a9ae012e4e873e465903",
+      "name": "60016",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60017,
+      "oid": "2c99028e2e48a9ae012e4e87e0bf5909",
+      "name": "60017",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60018,
+      "oid": "2c99028e2e48a9ae012e4e883424590f",
+      "name": "60018",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60019,
+      "oid": "2c99028e2e48a9ae012e4e888c775915",
+      "name": "60019",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60020,
+      "oid": "2c99028e2e48a9ae012e4e88fb985930",
+      "name": "60020",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60021,
+      "oid": "2c99028e2e48a9ae012e4e8960825936",
+      "name": "60021",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60022,
+      "oid": "2c99028e2e48a9ae012e4e89fb22593d",
+      "name": "60022",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60023,
+      "oid": "2c99028e2e48a9ae012e4e8a545b5944",
+      "name": "60023",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60024,
+      "oid": "2c99028e2e48a9ae012e4e8aa69d594a",
+      "name": "60024",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60025,
+      "oid": "2c99028e2e48a9ae012e4e8b54ed5951",
+      "name": "60025",
+      "modify": true,
+      "view": true
+    },
+    {
+      "id": 60026,
+      "oid": "2c99ef4b30c37a580130e20453730b24",
+      "name": "60026 test for default SWS pref config setting",
+      "modify": true,
+      "view": true
+    }
+  ]
+}

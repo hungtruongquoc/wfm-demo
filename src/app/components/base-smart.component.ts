@@ -12,7 +12,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class BaseSmartComponent extends BaseComponent implements OnInit, OnDestroy {
 
-  @select() protected readonly isLoading$: Observable<boolean>;
+  @select('isLoading') readonly isAppLoading$: Observable<boolean>;
 
   protected navigationEndSub: Subscription;
 

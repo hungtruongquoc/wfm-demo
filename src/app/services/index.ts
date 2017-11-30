@@ -26,6 +26,8 @@ export class NiceDataService {
         debugger;
       });
     }
-    return this.http.request(req);
+    else {
+      return this.http.request(req);
+    }
   }
 }

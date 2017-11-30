@@ -15,7 +15,7 @@ export class NiceDataService {
     const cookieUrl = 'http://172.25.111.19/delegate/forwarderServlet/process.do?url=http://172.25.111.19/TV4/services/rs/system/config&initpage=http://172.25.111.19/TV4/services/rs/auth/platform/sso&appid=TV4';
     const cookieReq = new HttpRequest('GET', cookieUrl, null, {reportProgress: true, responseType: 'text'});
     console.log(cookieReq);
-    return this.http.request(cookieReq).flatMap((event) => {
+    return this.http.request(cookieReq).flatMap(function (event) {
       console.log(event);
       console.log(arguments);
       if (event.type === HttpEventType.Response) {

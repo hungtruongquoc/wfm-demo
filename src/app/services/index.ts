@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpRequest} from '@angular/common/http';
+import {HttpClient, HttpEventType, HttpRequest} from '@angular/common/http';
+import {Subject} from 'rxjs/Subject';
+import 'rxjs/add/operator/mergeMap';
 
 @Injectable()
 export class NiceDataService {
@@ -22,8 +24,12 @@ export class NiceDataService {
       // Makes request to set the cookies
       const cookieUrl = 'http://172.25.111.19/delegate/forwarderServlet/process.do?url=http://172.25.111.19/TV4/services/rs/system/config&initpage=http://172.25.111.19/TV4/services/rs/auth/platform/sso&appid=TV4';
       const cookieReq = new HttpRequest('GET', cookieUrl);
-      this.http.request(req).subscribe(() => {
-        debugger;
+
+      return this.http.request(cookieReq).flatMap((event) => {
+        if (event.type === HttpEventType.Response) {
+          debugger;
+          return this.http.request(req);
+        }
       });
     }
     else {

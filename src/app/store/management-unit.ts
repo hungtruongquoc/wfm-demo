@@ -24,14 +24,21 @@ export class ManagementUnit {
   addItem: Subject<ManagementUnitModel> = new Subject<ManagementUnitModel>();
 
   constructor (private dataService: NiceDataService) {
-    this.items = this.updates.scan((items: ManagementUnitModel[], operation: Function ) => () => operation(items), [])
+    // Hooks the addItem operation stream to the newItem stream which is used for adding new item to the list
+    this.newItem.subscribe(this.addItem);
+    this.items = this.updates.scan((items: ManagementUnitModel[], operation: Function ) => {
+      return operation(items);
+    }, [])
       // make sure we can share the most recent list of management unit across anyone
       // who's interested in subscribing and cache the last known list of management unit
       .publishReplay(1)
       .refCount();
 
-    this.addItem.map((newUnit: ManagementUnitModel) => (items: ManagementUnitModel[]) => items.concat(newUnit))
-      .subscribe(this.updates);
+    this.addItem.map((newUnit: ManagementUnitModel) => {
+      return (items: ManagementUnitModel[]) => {
+        return items.concat(newUnit);
+      };
+    }).subscribe(this.updates);
   }
 
   addManagumentUnit(newMU: ManagementUnitModel) {
@@ -46,7 +53,9 @@ export class ManagementUnit {
     this.dataService.ManagementUnits.subscribe((event) => {
       if (event.type === HttpEventType.Response) {
         const data: Array<{}> = <Array<{}>> event.body;
-        data.forEach((newItem) => { this.addManagumentUnit(newItem); });
+        data.forEach((newItem) => {
+          this.addManagumentUnit(newItem);
+        });
       }
     });
   }

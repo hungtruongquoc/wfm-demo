@@ -22,8 +22,6 @@ export class IndexComponent extends BaseSmartComponent implements OnInit {
   readonly visitCounts: Observable<number>;
 
   ngOnInit() {
-    this.managementUnit.getAllWithEvents().subscribe((event) => {
-      console.log(event);
-    });
+    this.managementUnit.getAll();
   }
 }

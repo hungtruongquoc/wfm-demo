@@ -14,7 +14,7 @@ import {ManagementUnit} from './store/models';
 import {NiceDataService} from './services';
 import {environment} from '../environments/environment';
 
-function createNiceDataService (httpClient: HttpClient) {
+export function createNiceDataService (httpClient: HttpClient) {
   return new NiceDataService(environment, httpClient);
 }
 

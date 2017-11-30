@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {NgRedux, select} from '@angular-redux/store';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
@@ -12,7 +12,7 @@ import {BaseSmartComponent} from '../../components/base-smart.component';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexComponent extends BaseSmartComponent implements OnInit {
+export class IndexComponent extends BaseSmartComponent implements OnInit, AfterViewInit {
   constructor(store: NgRedux<IAppState>, router: Router, protected managementUnit: ManagementUnit) {
     super(store, router);
     this.title = 'Test';
@@ -22,6 +22,10 @@ export class IndexComponent extends BaseSmartComponent implements OnInit {
   readonly visitCounts: Observable<number>;
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
     this.managementUnit.getAll();
   }
 

@@ -1,6 +1,5 @@
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
-import {HttpEvent, HttpEventType} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/publishReplay';
@@ -51,12 +50,13 @@ export class ManagementUnit {
 
   getAll(): void {
     this.dataService.ManagementUnits.subscribe((event) => {
-      if (event.type === HttpEventType.Response) {
-        const data: Array<{}> = <Array<{}>> event.body;
-        data.forEach((newItem) => {
-          this.addManagumentUnit(newItem);
-        });
-      }
+      // if (event.type === HttpEventType.Response) {
+      //   const data: Array<{}> = <Array<{}>> event.body;
+      //   data.forEach((newItem) => {
+      //     this.addManagumentUnit(newItem);
+      //   });
+      // }
+      console.log(event);
     });
   }
 }

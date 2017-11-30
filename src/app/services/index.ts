@@ -1,14 +1,16 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpEventType, HttpRequest} from '@angular/common/http';
+// import {HttpClient, HttpEvent, HttpEventType, HttpRequest} from '@angular/common/http';
+import {HttpClient, HttpRequest} from '@angular/common/http';
 import 'rxjs/add/operator/mergeMap';
+// import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class NiceDataService {
   constructor(private environment: any, private http: HttpClient) {}
 
-  private getManagementUnitApiUrl() {
-    return 'http://172.25.111.19/TV4/services/rs/mus/selector';
-  }
+  // private getManagementUnitApiUrl() {
+  //   return 'http://172.25.111.19/TV4/services/rs/mus/selector';
+  // }
 
   get ManagementUnits() {
     const req = new HttpRequest('GET', 'http://172.25.111.19/TV4/services/rs/mus/selector', null, {reportProgress: true, responseType: 'json'});

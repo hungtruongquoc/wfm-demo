@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {NgRedux, select} from '@angular-redux/store';
+import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 
-import {IAppState} from '../../store/models';
-
+import {IAppState, ManagementUnit} from '../../store/models';
 import {BaseSmartComponent} from '../../components/base-smart.component';
-import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'test-index',
@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent extends BaseSmartComponent implements OnInit {
-  constructor(store: NgRedux<IAppState>, router: Router) {
+  constructor(store: NgRedux<IAppState>, router: Router, private managementUnit: ManagementUnit) {
     super(store, router);
     this.title = 'Test';
   }
@@ -22,5 +22,8 @@ export class IndexComponent extends BaseSmartComponent implements OnInit {
   readonly visitCounts: Observable<number>;
 
   ngOnInit() {
+    this.managementUnit.getAllWithEvents().subscribe((event) => {
+      console.log(event);
+    });
   }
 }

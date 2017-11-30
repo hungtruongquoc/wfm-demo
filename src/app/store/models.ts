@@ -1,3 +1,6 @@
+export {ManagementUnitModel} from './management-unit';
+export {ManagementUnit} from './management-unit';
+
 export interface IPageInfo {
   [name: string]: number;
 }

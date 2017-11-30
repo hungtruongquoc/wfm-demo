@@ -4,15 +4,28 @@ import { NgReduxTestingModule } from '@angular-redux/store/testing';
 
 import { IndexComponent } from './index.component';
 import {ShareComponentModule} from '../../components/share-component.module';
+import {NiceDataService} from '../../services';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
+import {ManagementUnit} from '../../store/management-unit';
 
 describe('Test - IndexComponent', () => {
   let component: IndexComponent;
   let fixture: ComponentFixture<IndexComponent>;
 
   beforeEach(async(() => {
+
+    // function createNiceDataService (httpClient: HttpClient) {
+    //   return new NiceDataService(environment, httpClient);
+    // }
+
     TestBed.configureTestingModule({
       declarations: [ IndexComponent ],
-      imports: [ShareComponentModule, RouterTestingModule, NgReduxTestingModule]
+      imports: [ShareComponentModule, RouterTestingModule, NgReduxTestingModule, HttpClientModule],
+      providers: [ManagementUnit, {
+        provide: NiceDataService,
+        useFactory: (httpClient: HttpClient) => new NiceDataService(environment, httpClient) ,
+        deps: [HttpClient]}]
     })
     .compileComponents();
   }));

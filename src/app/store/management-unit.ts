@@ -5,6 +5,7 @@ import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/publishReplay';
 
 import {NiceDataService} from '../services';
+import {HttpEvent, HttpEventType} from '@angular/common/http';
 
 export class ManagementUnitModel {
   constructor() {}
@@ -49,14 +50,14 @@ export class ManagementUnit {
   // }
 
   getAll(): void {
-    this.dataService.ManagementUnits.subscribe((event) => {
-      // if (event.type === HttpEventType.Response) {
-      //   const data: Array<{}> = <Array<{}>> event.body;
-      //   data.forEach((newItem) => {
-      //     this.addManagumentUnit(newItem);
-      //   });
-      // }
-      console.log(event);
+    this.dataService.ManagementUnits.subscribe((event: HttpEvent<{}>) => {
+      if (event.type === HttpEventType.Response) {
+        const data: Array<{}> = <Array<{}>> event.body;
+        data.forEach((newItem) => {
+          this.addManagumentUnit(newItem);
+        });
+      }
+      // console.log(event);
     });
   }
 }

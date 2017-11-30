@@ -45,9 +45,9 @@ export class ManagementUnit {
     this.newItem.next(newMU);
   }
 
-  getAllWithEvents(): Observable<HttpEvent<any>> {
-    return this.dataService.ManagementUnits;
-  }
+  // getAllWithEvents(): Observable<HttpEvent<any>> {
+  //   return this.dataService.ManagementUnits;
+  // }
 
   getAll(): void {
     this.dataService.ManagementUnits.subscribe((event) => {

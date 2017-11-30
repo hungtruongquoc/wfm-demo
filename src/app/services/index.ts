@@ -15,14 +15,12 @@ export class NiceDataService {
     const cookieUrl = 'http://172.25.111.19/delegate/forwarderServlet/process.do?url=http://172.25.111.19/TV4/services/rs/system/config&initpage=http://172.25.111.19/TV4/services/rs/auth/platform/sso&appid=TV4';
     const cookieReq = new HttpRequest('GET', cookieUrl, null, {reportProgress: true, responseType: 'text'});
     console.log(cookieReq);
-    return this.http.request(cookieReq).flatMap(function (event) {
-      console.log(event);
+    return this.http.get(cookieUrl).flatMap(function (args) {
+      console.log(args);
       console.log(arguments);
-      if (event.type === HttpEventType.Response) {
-        debugger;
-        console.log(req);
-        return this.http.request(req);
-      }
+      debugger;
+      console.log(req);
+      return this.http.request(req);
     });
   }
 }

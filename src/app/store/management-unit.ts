@@ -50,7 +50,7 @@ export class ManagementUnit {
   // }
 
   getAll(): void {
-    this.dataService.ManagementUnits.subscribe((event: HttpEvent<{}>) => {
+    this.dataService.ManagementUnits.subscribe((event: HttpEvent<any>) => {
       if (event.type === HttpEventType.Response) {
         const data: Array<{}> = <Array<{}>> event.body;
         data.forEach((newItem) => {

@@ -1,7 +1,7 @@
-<h4 *ngIf="isLoading && (managementUnit.items | async)?.length < 1" class="text-center" >
+<h4 *ngIf="isLoading && (MuList | async)?.length < 1" class="text-center" >
   <wfm-loading></wfm-loading>
 </h4>
-<div class="container" *ngIf="(managementUnit.items | async)?.length > 0">
+<div class="container" *ngIf="(MuList | async)?.length > 0">
   <div class="card m-2">
     <div class="card-block">
       <div class="row">
@@ -12,14 +12,14 @@
         </div>
         <div class="col text-right">
           <h4 class="card-title m-4">
-            {{(managementUnit.items | async)?.length}} item(s)
+            {{(MuList | async)?.length}} item(s)
           </h4>
         </div>
       </div>
       <div class="row">
         <div class="col"style="overflow:hidden;">
           <ul class="list-group" style="overflow: auto; height: 400px">
-            <li class="list-group-item" *ngFor="let mu of (managementUnit.items | async)">
+            <li class="list-group-item" *ngFor="let mu of (MuList | async)">
               <div class="row">
                 <div class="col text-right">
                   {{mu.id}}

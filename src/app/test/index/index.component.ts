@@ -13,7 +13,7 @@ import {BaseSmartComponent} from '../../components/base-smart.component';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent extends BaseSmartComponent implements OnInit {
-  constructor(store: NgRedux<IAppState>, router: Router, private managementUnit: ManagementUnit) {
+  constructor(store: NgRedux<IAppState>, router: Router, protected managementUnit: ManagementUnit) {
     super(store, router);
     this.title = 'Test';
   }
@@ -23,5 +23,9 @@ export class IndexComponent extends BaseSmartComponent implements OnInit {
 
   ngOnInit() {
     this.managementUnit.getAll();
+  }
+
+  get MuList() {
+    return this.managementUnit.items;
   }
 }

@@ -23,6 +23,6 @@ export class NiceDataService {
       debugger;
       console.log(req);
       return this.http.request(req);
-    });
+    }.bind(this));
   }
 }

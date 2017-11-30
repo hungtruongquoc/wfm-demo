@@ -18,7 +18,7 @@ export class AppComponent {
 
   constructor(private store: NgRedux<AppState>) {
     this.isLoading$.subscribe((value: boolean) => { this._progressBarDisplayed = value; });
-    setTimeout(() => { this.markGlobalLoadingCompleted(); }, 10000);
+    setTimeout(() => { this.markGlobalLoadingCompleted(); }, 10);
   }
 
   set progressBarDisplayed(show: boolean) {

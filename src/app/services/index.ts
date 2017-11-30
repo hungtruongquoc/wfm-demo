@@ -13,7 +13,7 @@ export class NiceDataService {
   get ManagementUnits() {
     const req = new HttpRequest('GET', 'http://172.25.111.19/TV4/services/rs/mus/selector', null, {reportProgress: true, responseType: 'json'});
     const cookieUrl = 'http://172.25.111.19/delegate/forwarderServlet/process.do?url=http://172.25.111.19/TV4/services/rs/system/config&initpage=http://172.25.111.19/TV4/services/rs/auth/platform/sso&appid=TV4';
-    const cookieReq = new HttpRequest('GET', cookieUrl);
+    const cookieReq = new HttpRequest('GET', cookieUrl, null, {reportProgress: true, responseType: 'text'});
     return this.http.request(cookieReq).flatMap((event) => {
       console.log(event);
       if (event.type === HttpEventType.Response) {

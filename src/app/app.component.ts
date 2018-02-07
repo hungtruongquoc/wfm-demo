@@ -12,7 +12,7 @@ import {GLOBAL_LOADING_COMPLETED} from './shared/actions';
 })
 export class AppComponent {
   @select() readonly isLoading$: Observable<boolean>;
-  title = 'Embedded App';
+  title = 'Supervisor Portal';
   // Property for showing/hiding the global progress bar
   protected _progressBarDisplayed = true;
 

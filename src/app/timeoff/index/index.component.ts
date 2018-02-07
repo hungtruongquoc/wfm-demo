@@ -9,6 +9,8 @@ export class IndexComponent implements OnInit {
 
   constructor() { }
 
+  isLoading = true;
+
   ngOnInit() {
   }
 

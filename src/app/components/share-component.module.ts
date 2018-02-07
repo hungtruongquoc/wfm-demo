@@ -5,12 +5,13 @@ import {BaseComponent} from './base.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoadingComponent } from './loading/loading.component';
 import {BaseSmartComponent} from './base-smart.component';
-import {MatDividerModule} from '@angular/material';
+import {MatDividerModule, MatTableModule} from '@angular/material';
 
 @NgModule({
   imports: [
     NgbModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule
   ],
   declarations: [
     BaseComponent,
@@ -23,7 +24,8 @@ import {MatDividerModule} from '@angular/material';
     LoadingComponent,
     BaseComponent,
     BaseSmartComponent,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule
   ]
 
 })

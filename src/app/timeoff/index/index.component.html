@@ -1,3 +1,51 @@
 <h4 *ngIf="isLoading" class="text-center" >
   <wfm-loading></wfm-loading>
 </h4>
+<div class="container">
+  <div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="data">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Agent Id Column -->
+      <ng-container matColumnDef="agentId">
+        <mat-header-cell *matHeaderCellDef> Agent ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.agentId}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="agentName">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.agentName}} </mat-cell>
+      </ng-container>
+
+      <!-- actualBiddingOrder Column -->
+      <ng-container matColumnDef="actualBiddingOrder">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'"> Original Position </mat-header-cell>
+        <mat-cell *matCellDef="let element" [ngClass]="'text-right'"> {{element.actualBiddingOrder}} </mat-cell>
+      </ng-container>
+
+      <!-- actualBiddingOrder Column -->
+      <ng-container matColumnDef="pointsEarned">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'"> Points Earned </mat-header-cell>
+        <mat-cell *matCellDef="let element" [ngClass]="'text-right'"> {{element.pointsEarned}} </mat-cell>
+      </ng-container>
+
+      <!-- actualBiddingOrder Column -->
+      <ng-container matColumnDef="newBiddingOrder">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'"> New Position </mat-header-cell>
+        <mat-cell *matCellDef="let element"
+                  [ngClass]="{'text-right': true}">
+          {{element.newBiddingOrder}}
+          <i class="far fa fa-arrow-down" *ngIf="element.difference > 0"></i>
+          <i class="far fa fa-arrow-up" *ngIf="element.difference < 0"></i>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  </div>
+</div>

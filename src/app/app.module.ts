@@ -13,6 +13,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {ManagementUnit} from './store/models';
 import {NiceDataService} from './services';
 import {environment} from '../environments/environment';
+import {TimeOffModule} from './timeoff/timeoff.module';
 
 export function createNiceDataService (httpClient: HttpClient) {
   return new NiceDataService(environment, httpClient);
@@ -29,7 +30,8 @@ export function createNiceDataService (httpClient: HttpClient) {
     ShareComponentModule,
     NgReduxModule,
     StoreModule,
-    HttpClientModule
+    HttpClientModule,
+    TimeOffModule
   ],
   providers: [
     ManagementUnit,

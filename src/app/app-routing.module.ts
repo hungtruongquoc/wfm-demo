@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: 'app/login/login.module#LoginModule'
   },
   {
+    path: 'timeoff',
+    loadChildren: 'app/timeoff/timeoff.module#TimeOffModule'
+  },
+  {
     path: '',
     // children: [],
     redirectTo: '/login',

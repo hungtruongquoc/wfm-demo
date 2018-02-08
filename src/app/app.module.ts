@@ -14,6 +14,7 @@ import {ManagementUnit} from './store/models';
 import {NiceDataService} from './services';
 import {environment} from '../environments/environment';
 import {TimeOffModule} from './timeoff/timeoff.module';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export function createNiceDataService (httpClient: HttpClient) {
   return new NiceDataService(environment, httpClient);
@@ -25,6 +26,7 @@ export function createNiceDataService (httpClient: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule.forRoot(),
     ShareComponentModule,

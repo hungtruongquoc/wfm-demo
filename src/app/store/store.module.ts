@@ -12,16 +12,24 @@ import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store'
 import { createLogger } from 'redux-logger';
 
 // The top-level reducers and epics that make up our app's logic.
-import {IAppState, INITIAL_STATE} from './models';
+import {AppState, IAppState, INITIAL_STATE} from './models';
 import { rootReducer } from './reducers';
-import { RootEpics } from './epics';
+import {RootEpics, TimeOffEpics} from './epics';
+import { StoreActions } from './app.action';
+import {TimeOffService} from "../services";
 
 @NgModule({
   imports: [
-    NgReduxModule,
+    NgReduxModule
     // NgReduxRouterModule
   ],
-  providers: [RootEpics],
+  providers: [
+    AppState,
+    RootEpics,
+    StoreActions,
+    TimeOffEpics,
+    TimeOffService
+  ]
 })
 export class StoreModule {
   constructor(

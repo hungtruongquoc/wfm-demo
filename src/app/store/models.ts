@@ -1,3 +1,5 @@
+import {Observable} from "rxjs/Observable";
+
 export {ManagementUnitModel} from './management-unit';
 export {ManagementUnit} from './management-unit';
 
@@ -7,17 +9,16 @@ export interface IPageInfo {
 
 export interface IAppState {
   pages: IPageInfo;
+  timeOffBiddingList: any[];
   routes?: any;
   feedback?: any;
   isAuthenticated: boolean;
   routeGuardEnabled: boolean;
   isLoading: boolean;
+  agents: Array<any>;
   visitCounts(): number;
-
   getPageVisitCount(pageName: string): number;
-
   copyPageCollection(oldCollection: IPageInfo): void;
-
   getNumberOfPages(): number;
 }
 
@@ -26,6 +27,8 @@ export class AppState implements IAppState {
   isAuthenticated = false;
   _routeGuardEnabled = false;
   _isLoading = true;
+  agents = [];
+  timeOffBiddingList = [];
 
   get routeGuardEnabled() {
     return this._routeGuardEnabled;

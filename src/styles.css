@@ -26,3 +26,11 @@ div.filter-input-container > mat-form-field {
   max-height: 500px;
   overflow: auto;
 }
+
+wfm-loading {
+  position:relative;
+}
+
+wfm-loading > mat-spinner.mat-spinner {
+  position:absolute;
+}

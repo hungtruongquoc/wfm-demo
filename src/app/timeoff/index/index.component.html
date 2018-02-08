@@ -3,10 +3,18 @@
 </h4>
 <div class="container">
   <div class="example-container mat-elevation-z8">
-    <div class="container-fluid filter-input-container">
-      <mat-form-field>
-        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-      </mat-form-field>
+    <div class="container-fluid filter-input-container p-2">
+      <!--<mat-form-field>-->
+        <!--<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">-->
+      <!--</mat-form-field>-->
+      <mat-button-toggle-group #group (change)="switchDataSource($event)">
+        <mat-button-toggle #beforeButton value="before">
+          Before
+        </mat-button-toggle>
+        <mat-button-toggle #afterButton value="after">
+          After
+        </mat-button-toggle>
+      </mat-button-toggle-group>
     </div>
     <mat-table #table [dataSource]="dataSource" matSort [matSortDisableClear]="true" id="agent-bidding-order">
 
@@ -32,7 +40,7 @@
 
       <!-- actualBiddingOrder Column -->
       <ng-container matColumnDef="actualBiddingOrder">
-        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> Previous Seniority
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> Original Seniority
         </mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{'text-right': true, 'text-success': element.difference < 0, 'text-danger': element.difference > 0}">
@@ -41,10 +49,13 @@
       </ng-container>
 
       <!-- actualBiddingOrder Column -->
-      <ng-container matColumnDef="timeTaken">
-        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> Time taken (minutes) </mat-header-cell>
+      <ng-container matColumnDef="biddingTime">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header>
+          Time Taken (minutes)
+        </mat-header-cell>
         <mat-cell *matCellDef="let element"
-                  [ngClass]="{'text-right': true, 'text-success': element.difference < 0, 'text-danger': element.difference > 0}"> {{element.timeTaken}}
+                  [ngClass]="{'text-right': true, 'text-success': element.difference < 0, 'text-danger': element.difference > 0}">
+          {{element.biddingTime}}
         </mat-cell>
       </ng-container>
 
@@ -72,7 +83,7 @@
       </mat-row>
     </mat-table>
     <mat-paginator #paginator
-                   [pageSize]="2"
+                   [pageSize]="20"
                    [pageSizeOptions]="[2, 5, 10, 20]"
                    [showFirstLastButtons]="true">
     </mat-paginator>

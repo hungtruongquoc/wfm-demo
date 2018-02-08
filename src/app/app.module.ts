@@ -9,16 +9,11 @@ import {AppComponent} from './app.component';
 
 import {ShareComponentModule} from './components/share-component.module';
 import {StoreModule} from './store/store.module';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import {ManagementUnit} from './store/models';
 import {NiceDataService} from './services';
-import {environment} from '../environments/environment';
 import {TimeOffModule} from './timeoff/timeoff.module';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-
-export function createNiceDataService (httpClient: HttpClient) {
-  return new NiceDataService(environment, httpClient);
-}
 
 @NgModule({
   declarations: [
@@ -37,7 +32,7 @@ export function createNiceDataService (httpClient: HttpClient) {
   ],
   providers: [
     ManagementUnit,
-    { provide: NiceDataService, useFactory: createNiceDataService , deps: [HttpClient]}
+    NiceDataService
   ],
   bootstrap: [AppComponent]
 })

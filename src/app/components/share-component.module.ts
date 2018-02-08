@@ -6,7 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoadingComponent } from './loading/loading.component';
 import {BaseSmartComponent} from './base-smart.component';
 import {
-  MatDividerModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatSortModule,
+  MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatPaginatorModule, MatSortModule,
   MatTableModule
 } from '@angular/material';
 
@@ -18,7 +18,8 @@ import {
     MatSortModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   declarations: [
     BaseComponent,
@@ -36,7 +37,8 @@ import {
     MatSortModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ]
 
 })

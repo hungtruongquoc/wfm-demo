@@ -32,7 +32,7 @@
 
       <!-- actualBiddingOrder Column -->
       <ng-container matColumnDef="actualBiddingOrder">
-        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> Previous Position
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> Previous Seniority
         </mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{'text-right': true, 'text-success': element.difference < 0, 'text-danger': element.difference > 0}">
@@ -50,7 +50,7 @@
 
       <!-- actualBiddingOrder Column -->
       <ng-container matColumnDef="newBiddingOrder">
-        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> New Position </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'" mat-sort-header> New Seniority </mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{'text-right': true, 'text-success': element.difference < 0, 'text-danger': element.difference > 0}">
           <strong>{{element.newBiddingOrder}}</strong>
@@ -62,8 +62,8 @@
         <mat-header-cell *matHeaderCellDef [ngClass]="'text-right'"> Change </mat-header-cell>
         <mat-cell *matCellDef="let element"
                   [ngClass]="{'text-right': true, 'text-success': element.difference < 0, 'text-danger': element.difference > 0}">
-          <i *ngIf="element.difference > 0" class="far fa fa-arrow-down"></i>
-          <i *ngIf="element.difference < 0" class="far fa fa-arrow-up"></i>
+          <mat-icon *ngIf="element.difference > 0">arrow_downward</mat-icon>
+          <mat-icon *ngIf="element.difference < 0">arrow_upward</mat-icon>
         </mat-cell>
       </ng-container>
 

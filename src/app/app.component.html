@@ -30,7 +30,16 @@
         <!--{{getPageVisit('Login') | async}}-->
       </a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{disabled: progressBarDisplayed}" routerLink="/adhere" routerLinkActive="active">
+        <mat-icon>warning</mat-icon> Adhere
+        <!--{{getPageVisit('Login') | async}}-->
+      </a>
+    </li>
   </ul>
+  <div class="col-12">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <!--<h2>Here are some links to help you start: </h2>-->
 <!--<ul>-->
@@ -44,5 +53,3 @@
     <!--<h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>-->
   <!--</li>-->
 <!--</ul>-->
-
-<router-outlet></router-outlet>

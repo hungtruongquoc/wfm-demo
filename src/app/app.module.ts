@@ -1,3 +1,4 @@
+import { AdhereModule } from './adhere/adhere.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
@@ -28,7 +29,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     NgReduxModule,
     StoreModule,
     HttpClientModule,
-    TimeOffModule
+    TimeOffModule,
+    AdhereModule
   ],
   providers: [
     ManagementUnit,

@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: 'app/timeoff/timeoff.module#TimeOffModule'
   },
   {
+    path: 'adhere',
+    loadChildren: 'app/adhere/adhere.module#AdhereModule'
+  },
+  {
     path: '',
     // children: [],
     redirectTo: '/login',
